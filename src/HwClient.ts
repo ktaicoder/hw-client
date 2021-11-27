@@ -1,4 +1,4 @@
-import { firstValueFrom, map, Observable } from 'rxjs'
+import { firstValueFrom, map, Observable, timeout } from 'rxjs'
 import { DeviceCtlResponse, HwSocket } from './HwSocket'
 
 function nextRequestId() {
@@ -44,6 +44,19 @@ export class HwClient {
      */
     observeConnected = (): Observable<boolean> => {
         return this.socket.observeState().pipe(map((it) => it === 'connected'))
+    }
+
+    /**
+     * 연결될 때까지 기다리기
+     * @param timeoutMilli 타임아웃 밀리초, 0보다 작으면 타임아웃 없음
+     */
+    waitForConnected = async (timeoutMilli = 0): Promise<void> => {
+        const src$ = this.socket.observeState().pipe(map((it) => it === 'connected'))
+        if (timeoutMilli > 0) {
+            await firstValueFrom(src$.pipe(timeout(timeoutMilli)))
+        } else {
+            await firstValueFrom(src$)
+        }
     }
 
     /**
