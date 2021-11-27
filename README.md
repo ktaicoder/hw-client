@@ -92,3 +92,15 @@ if(success) {
 #### 값을 읽을 때
 
 - 값을 읽을 때는 `sendAndWait()`을 호출한다.
+
+## 라이브러리 버전 업데이트
+
+다음과 같이 태그를 푸시하면 github에서 빌드하여, npm에 올려준다.
+
+```bash
+$  npm version patch
+v1.0.1
+
+$ npm push && npm push origin v1.0.1
+
+```
