@@ -11,7 +11,7 @@ $  yarn add @ktaicoder/hw-client
 ```
 
 ### 필수 디펜던시 설치
-이 라이브러리를 사용하려면 `rxjs@^7`와 `socket.io@^4` 라이브러리가 필요합니다.
+이 라이브러리를 사용하려면 `rxjs@^7`와 `socket.io@^4` 라이브러리가 필요합니다. `peerDependency`로 설정되어 있습니다.
 ```bash
 $  yarn add rxjs@^7 socket.io@^4
 ```

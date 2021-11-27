@@ -43,8 +43,8 @@ export class RxSocketIoClient {
 
     static fromMessageEvent = (socket: Socket, eventName: string): Observable<any> => {
         return new Observable((emit) => {
-            const handle = (err) => {
-                emit.next(err)
+            const handle = (msg) => {
+                emit.next(msg)
             }
 
             socket.on(eventName, handle)
