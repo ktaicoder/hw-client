@@ -1,6 +1,6 @@
 {
   "name": "@ktaicoder/hw-client",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "hw client",
   "main": "build/cjs/index.js",
   "module": "build/es/index.js",
