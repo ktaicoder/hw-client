@@ -1,32 +1,32 @@
 {
-  "name": "@ktaicoder/hw-client",
-  "version": "1.0.1",
-  "description": "hw client",
-  "main": "cjs/index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ktaicoder/hw-client.git"
-  },
-  "keywords": [],
-  "author": "ktaicoder",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ktaicoder/hw-client/issues"
-  },
-  "homepage": "https://aicodingblock.kt.co.kr",
-  "scripts": {
-    "build": "rimraf build && rollup -c rollup.config.all.js",
-    "build:es": "rimraf build && rollup -c rollup.config.es.js",
-    "build:cjs": "rimraf build && rollup -c rollup.config.cjs.js",
-    "dist": "yarn build:cjs && rimraf dist && node scripts/dist-package.js",
-    "clean": "rimraf build dist",
-    "lint": "eslint --fix \"src/**\" ",
-    "fmt": "prettier --write \"src/**\" ",
-    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' yarn mocha test/**/*.ts"
-  },
-  "dependencies": {},
-  "peerDependencies": {
-    "socket.io-client": "^4",
-    "rxjs": "^7"
-  }
+    "name": "@ktaicoder/hw-client",
+    "version": "1.0.6",
+    "description": "hw client",
+    "main": "cjs/index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ktaicoder/hw-client.git"
+    },
+    "keywords": [],
+    "author": "ktaicoder",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ktaicoder/hw-client/issues"
+    },
+    "homepage": "https://aicodingblock.kt.co.kr",
+    "scripts": {
+        "build": "rimraf build && rollup -c rollup.config.all.js",
+        "build:es": "rimraf build && rollup -c rollup.config.es.js",
+        "build:cjs": "rimraf build && rollup -c rollup.config.cjs.js",
+        "dist": "yarn build:cjs && rimraf dist && node scripts/dist-package.js",
+        "clean": "rimraf build dist",
+        "lint": "eslint --fix \"src/**\" ",
+        "fmt": "prettier --write \"src/**\" ",
+        "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' yarn mocha test/**/*.ts"
+    },
+    "dependencies": {},
+    "peerDependencies": {
+        "socket.io-client": "^4",
+        "rxjs": "^7"
+    }
 }
