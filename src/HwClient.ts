@@ -68,7 +68,7 @@ export class HwClient {
      * @param cmd 명령어
      * @param args 명령어 파라미터
      */
-    sendForgot = (hwId: string, cmd: string, ...args: any[]) => {
+    sendForget = (hwId: string, cmd: string, ...args: any[]) => {
         const requestId = nextRequestId()
 
         // 연결이 안되채로 호출하면 예외가 발생한다
@@ -90,7 +90,7 @@ export class HwClient {
      * @param cmd 명령어
      * @param args 명령어 파라미터
      */
-    sendAndWait = async (hwId: string, cmd: string, ...args: any[]): Promise<DeviceCtlResponse> => {
+    send = async (hwId: string, cmd: string, ...args: any[]): Promise<DeviceCtlResponse> => {
         const requestId = nextRequestId()
 
         // 연결이 안되채로 호출하면 예외가 발생한다
